@@ -5,7 +5,6 @@
  */
 package TaskClient;
 
-import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
 
@@ -175,22 +174,35 @@ public class AlertJFrame extends javax.swing.JFrame {
     private java.awt.Label nameLabel;
     // End of variables declaration//GEN-END:variables
     
-    public void setName(String name){
-        label1.setText(name);
-    }
     
+    /**
+     * Метод изменения текста метки {@link AlertJFrame#label4}
+     * @param name
+     */
     public void setTextName(String name){
         label4.setText(name); 
     }
     
+    /**
+     * Метод изменения текста метки {@link AlertJFrame#jTextArea1}
+     * @param description
+     */
     public void setTextDesc(String description){
         jTextArea1.setText(description); 
     }
     
+    /**
+     * Метод добавления MouseListener на кнопку {@link AlertJFrame#button1}
+     * @param ml
+     */
     public void addButtonListener(MouseListener ml){
         button1.addMouseListener(ml);
     }
     
+    /**
+     * Метод добавления MouseListener на кнопку {@link AlertJFrame#button2}
+     * @param ml
+     */
     public void addButton2Listener(MouseListener ml){
         button2.addMouseListener(ml);
     }

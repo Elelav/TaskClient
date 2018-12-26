@@ -46,8 +46,7 @@ public class Alert {
      
     void alarm(String name, String description)
             throws MalformedURLException, LineUnavailableException, 
-            UnsupportedAudioFileException, IOException, FileNotFoundException{        
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH-mm");
+            UnsupportedAudioFileException, IOException, FileNotFoundException{       
         AlarmSound sound = new AlarmSound();        
         ajf.setName("Alarm");
         ajf.setTextName(name);
@@ -64,12 +63,28 @@ public class Alert {
     void waitMinute(Date date) throws InterruptedException{
         Thread.sleep(60000);
     }
+
+    /**
+     * Метод добавления MouseListener на кнопку {@link AlertJFrame#button1}
+     * @param ml - MouseListener
+     * @see AlertJFrame#addButtonListener(java.awt.event.MouseListener) 
+     */
     public void addButtonListener(MouseListener ml){
         ajf.addButtonListener(ml);
     }
+    
+    /**
+     * Метод добавляет MouseListener на кнопку {@link AlertJFrame#button2}
+     * @param ml
+     * @see AlertJFrame#addButton2Listener(java.awt.event.MouseListener) 
+     */
     public void addButton2Listener(MouseListener ml){
         ajf.addButton2Listener(ml);
     }
+
+    /**
+     * Метод скрытия окна {@link AlertJFrame}
+     */
     public void disposeFrame(){
         ajf.dispose();
     }

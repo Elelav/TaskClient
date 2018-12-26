@@ -18,6 +18,11 @@ import io.netty.bootstrap.*;
  */
 public class TestClient {
    
+    /**
+     * Метод создает новое клиентское подключение к серверу
+     * @param args параметры запуска
+     * @throws Exception
+     */
     public static void main(String[] args) throws Exception {
         String host ="localhost";
         int port = Integer.parseInt("8080");
